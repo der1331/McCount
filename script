@@ -58,6 +58,27 @@ JPEG3=$(ls /opt/maltrieve/archive/JPEG/large | wc -l)
 JPEG2=$(ls /opt/maltrieve/archive/JPEG/medium | wc -l)
 JPEG1=$(ls /opt/maltrieve/archive/JPEG/small | wc -l)
 
+#Macintosh Pre-Count
+
+Macintosh4=$(ls /opt/maltrieve/archive/Macintosh/xlarge | wc -l)
+Macintosh3=$(ls /opt/maltrieve/archive/Macintosh/large | wc -l)
+Macintosh2=$(ls /opt/maltrieve/archive/Macintosh/medium | wc -l)
+Macintosh1=$(ls /opt/maltrieve/archive/Macintosh/small | wc -l)
+
+#Macromedia Pre-Count
+
+Macromedia4=$(ls /opt/maltrieve/archive/Macromedia/xlarge | wc -l)
+Macromedia3=$(ls /opt/maltrieve/archive/Macromedia/large | wc -l)
+Macromedia2=$(ls /opt/maltrieve/archive/Macromedia/medium | wc -l)
+Macromedia1=$(ls /opt/maltrieve/archive/Macromedia/small | wc -l)
+
+#Microsoft Pre-Count
+
+Microsoft4=$(ls /opt/maltrieve/archive/Microsoft/xlarge | wc -l)
+Microsoft3=$(ls /opt/maltrieve/archive/Microsoft/large | wc -l)
+Microsoft2=$(ls /opt/maltrieve/archive/Microsoft/medium | wc -l)
+Microsoft1=$(ls /opt/maltrieve/archive/Microsoft/small | wc -l)
+
 #MS Pre-Count
 
 MS4=$(ls /opt/maltrieve/archive/MS/xlarge | wc -l)
@@ -71,6 +92,20 @@ MSDOS4=$(ls /opt/maltrieve/archive/MS-DOS/xlarge | wc -l)
 MSDOS3=$(ls /opt/maltrieve/archive/MS-DOS/large | wc -l)
 MSDOS2=$(ls /opt/maltrieve/archive/MS-DOS/medium | wc -l)
 MSDOS1=$(ls /opt/maltrieve/archive/MS-DOS/small | wc -l)
+
+#Non-ISO Pre-Count
+
+NonISO4=$(ls /opt/maltrieve/archive/Non-ISO/xlarge | wc -l)
+NonISO3=$(ls /opt/maltrieve/archive/Non-ISO/large | wc -l)
+NonISO2=$(ls /opt/maltrieve/archive/Non-ISO/medium | wc -l)
+NonISO1=$(ls /opt/maltrieve/archive/Non-ISO/small | wc -l)
+
+#PalmOS Pre-Count
+
+PalmOS4=$(ls /opt/maltrieve/archive/PalmOS/xlarge | wc -l)
+PalmOS3=$(ls /opt/maltrieve/archive/PalmOS/large | wc -l)
+PalmOS2=$(ls /opt/maltrieve/archive/PalmOS/medium | wc -l)
+PalmOS1=$(ls /opt/maltrieve/archive/PalmOS/small | wc -l)
 
 #PDF Pre-Count
 
@@ -100,6 +135,13 @@ PNG3=$(ls /opt/maltrieve/archive/PNG/large | wc -l)
 PNG2=$(ls /opt/maltrieve/archive/PNG/medium | wc -l)
 PNG1=$(ls /opt/maltrieve/archive/PNG/small | wc -l)
 
+#POSIX Pre-Count
+
+POSIX4=$(ls /opt/maltrieve/archive/POSIX/xlarge | wc -l)
+POSIX3=$(ls /opt/maltrieve/archive/POSIX/large | wc -l)
+POSIX2=$(ls /opt/maltrieve/archive/POSIX/medium | wc -l)
+POSIX1=$(ls /opt/maltrieve/archive/POSIX/small | wc -l)
+
 #RAR Pre-Count
 
 RAR4=$(ls /opt/maltrieve/archive/RAR/xlarge | wc -l)
@@ -107,12 +149,40 @@ RAR3=$(ls /opt/maltrieve/archive/RAR/large | wc -l)
 RAR2=$(ls /opt/maltrieve/archive/RAR/medium | wc -l)
 RAR1=$(ls /opt/maltrieve/archive/RAR/small | wc -l)
 
+#Ruby Pre-Count
+
+Ruby4=$(ls /opt/maltrieve/archive/Ruby/xlarge | wc -l)
+Ruby3=$(ls /opt/maltrieve/archive/Ruby/large | wc -l)
+Ruby2=$(ls /opt/maltrieve/archive/Ruby/medium | wc -l)
+Ruby1=$(ls /opt/maltrieve/archive/Ruby/small | wc -l)
+
+#Symbian Pre-Count
+
+Symbian4=$(ls /opt/maltrieve/archive/Symbian/xlarge | wc -l)
+Symbian3=$(ls /opt/maltrieve/archive/Symbian/large | wc -l)
+Symbian2=$(ls /opt/maltrieve/archive/Symbian/medium | wc -l)
+Symbian1=$(ls /opt/maltrieve/archive/Symbian/small | wc -l)
+
+#troff Pre-Count
+
+troff4=$(ls /opt/maltrieve/archive/troff/xlarge | wc -l)
+troff3=$(ls /opt/maltrieve/archive/troff/large | wc -l)
+troff2=$(ls /opt/maltrieve/archive/troff/medium | wc -l)
+troff1=$(ls /opt/maltrieve/archive/troff/small | wc -l)
+
 #UTF8 Pre-Count
 
 UTF84=$(ls /opt/maltrieve/archive/UTF-8/xlarge | wc -l)
 UTF83=$(ls /opt/maltrieve/archive/UTF-8/large | wc -l)
 UTF82=$(ls /opt/maltrieve/archive/UTF-8/medium | wc -l)
 UTF81=$(ls /opt/maltrieve/archive/UTF-8/small | wc -l)
+
+#xHTML Pre-Count
+
+xHTML4=$(ls /opt/maltrieve/archive/xHTML/xlarge | wc -l)
+xHTML3=$(ls /opt/maltrieve/archive/xHTML/large | wc -l)
+xHTML2=$(ls /opt/maltrieve/archive/xHTML/medium | wc -l)
+xHTML1=$(ls /opt/maltrieve/archive/xHTML/small | wc -l)
 
 #XML Pre-Count
 
@@ -246,6 +316,48 @@ JPEGlg=$(expr $JPEG7 - $JPEG3)
 JPEGmd=$(expr $JPEG6 - $JPEG2)
 JPEGsm=$(expr $JPEG5 - $JPEG1)
 
+#Macintosh Total Malware After Running Maltrieve
+
+Macintosh8=$(ls /opt/maltrieve/archive/Macintosh/xlarge | wc -l)
+Macintosh7=$(ls /opt/maltrieve/archive/Macintosh/large | wc -l)
+Macintosh6=$(ls /opt/maltrieve/archive/Macintosh/medium | wc -l)
+Macintosh5=$(ls /opt/maltrieve/archive/Macintosh/small | wc -l)
+
+#Macintosh New Malware Calculated
+
+Macintoshxl=$(expr $Macintosh8 - $Macintosh4)
+Macintoshlg=$(expr $Macintosh7 - $Macintosh3)
+Macintoshmd=$(expr $Macintosh6 - $Macintosh2)
+Macintoshsm=$(expr $Macintosh5 - $Macintosh1)
+
+#Macromedia Total Malware After Running Maltrieve
+
+Macromedia8=$(ls /opt/maltrieve/archive/Macromedia/xlarge | wc -l)
+Macromedia7=$(ls /opt/maltrieve/archive/Macromedia/large | wc -l)
+Macromedia6=$(ls /opt/maltrieve/archive/Macromedia/medium | wc -l)
+Macromedia5=$(ls /opt/maltrieve/archive/Macromedia/small | wc -l)
+
+#Macromedia New Malware Calculated
+
+Macromediaxl=$(expr $Macromedia8 - $Macromedia4)
+Macromedialg=$(expr $Macromedia7 - $Macromedia3)
+Macromediamd=$(expr $Macromedia6 - $Macromedia2)
+Macromediasm=$(expr $Macromedia5 - $Macromedia1)
+
+#Microsoft Total Malware After Running Maltrieve
+
+Microsoft8=$(ls /opt/maltrieve/archive/Microsoft/xlarge | wc -l)
+Microsoft7=$(ls /opt/maltrieve/archive/Microsoft/large | wc -l)
+Microsoft6=$(ls /opt/maltrieve/archive/Microsoft/medium | wc -l)
+Microsoft5=$(ls /opt/maltrieve/archive/Microsoft/small | wc -l)
+
+#Microsoft New Malware Calculated
+
+Microsoftxl=$(expr $Microsoft8 - $Microsoft4)
+Microsoftlg=$(expr $Microsoft7 - $Microsoft3)
+Microsoftmd=$(expr $Microsoft6 - $Microsoft2)
+Microsoftsm=$(expr $Microsoft5 - $Microsoft1)
+
 #MS Total Malware After Running Maltrieve
 
 MS8=$(ls /opt/maltrieve/archive/MS/xlarge | wc -l)
@@ -253,7 +365,7 @@ MS7=$(ls /opt/maltrieve/archive/MS/large | wc -l)
 MS6=$(ls /opt/maltrieve/archive/MS/medium | wc -l)
 MS5=$(ls /opt/maltrieve/archive/MS/small | wc -l)
 
-#MSDOS New Malware Calculated
+#MS New Malware Calculated
 
 MSxl=$(expr $MS8 - $MS4)
 MSlg=$(expr $MS7 - $MS3)
@@ -273,6 +385,34 @@ MSDOSxl=$(expr $MSDOS8 - $MSDOS4)
 MSDOSlg=$(expr $MSDOS7 - $MSDOS3)
 MSDOSmd=$(expr $MSDOS6 - $MSDOS2)
 MSDOSsm=$(expr $MSDOS5 - $MSDOS1)
+
+#NonISO Total Malware After Running Maltrieve
+
+NonISO8=$(ls /opt/maltrieve/archive/Non-ISO/xlarge | wc -l)
+NonISO7=$(ls /opt/maltrieve/archive/Non-ISO/large | wc -l)
+NonISO6=$(ls /opt/maltrieve/archive/Non-ISO/medium | wc -l)
+NonISO5=$(ls /opt/maltrieve/archive/Non-ISO/small | wc -l)
+
+#NonISO New Malware Calculated
+
+NonISOxl=$(expr $NonISO8 - $NonISO4)
+NonISOlg=$(expr $NonISO7 - $NonISO3)
+NonISOmd=$(expr $NonISO6 - $NonISO2)
+NonISOsm=$(expr $NonISO5 - $NonISO1)
+
+#PalmOS Total Malware After Running Maltrieve
+
+PalmOS8=$(ls /opt/maltrieve/archive/PalmOS/xlarge | wc -l)
+PalmOS7=$(ls /opt/maltrieve/archive/PalmOS/large | wc -l)
+PalmOS6=$(ls /opt/maltrieve/archive/PalmOS/medium | wc -l)
+PalmOS5=$(ls /opt/maltrieve/archive/PalmOS/small | wc -l)
+
+#PalmOS New Malware Calculated
+
+PalmOSxl=$(expr $PalmOS8 - $PalmOS4)
+PalmOSlg=$(expr $PalmOS7 - $PalmOS3)
+PalmOSmd=$(expr $PalmOS6 - $PalmOS2)
+PalmOSsm=$(expr $PalmOS5 - $PalmOS1)
 
 #PDF Total Malware After Running Maltrieve
 
@@ -330,6 +470,20 @@ PNGlg=$(expr $PNG7 - $PNG3)
 PNGmd=$(expr $PNG6 - $PNG2)
 PNGsm=$(expr $PNG5 - $PNG1)
 
+#POSIX Total Malware After Running Maltrieve
+
+POSIX8=$(ls /opt/maltrieve/archive/POSIX/xlarge | wc -l)
+POSIX7=$(ls /opt/maltrieve/archive/POSIX/large | wc -l)
+POSIX6=$(ls /opt/maltrieve/archive/POSIX/medium | wc -l)
+POSIX5=$(ls /opt/maltrieve/archive/POSIX/small | wc -l)
+
+#POSIX New Malware Calculated
+
+POSIXxl=$(expr $POSIX8 - $POSIX4)
+POSIXlg=$(expr $POSIX7 - $POSIX3)
+POSIXmd=$(expr $POSIX6 - $POSIX2)
+POSIXsm=$(expr $POSIX5 - $POSIX1)
+
 #RAR Total Malware After Running Maltrieve
 
 RAR8=$(ls /opt/maltrieve/archive/RAR/xlarge | wc -l)
@@ -344,6 +498,48 @@ RARlg=$(expr $RAR7 - $RAR3)
 RARmd=$(expr $RAR6 - $RAR2)
 RARsm=$(expr $RAR5 - $RAR1)
 
+#Ruby Total Malware After Running Maltrieve
+
+Ruby8=$(ls /opt/maltrieve/archive/Ruby/xlarge | wc -l)
+Ruby7=$(ls /opt/maltrieve/archive/Ruby/large | wc -l)
+Ruby6=$(ls /opt/maltrieve/archive/Ruby/medium | wc -l)
+Ruby5=$(ls /opt/maltrieve/archive/Ruby/small | wc -l)
+
+#Ruby New Malware Calculated
+
+Rubyxl=$(expr $Ruby8 - $Ruby4)
+Rubylg=$(expr $Ruby7 - $Ruby3)
+Rubymd=$(expr $Ruby6 - $Ruby2)
+Rubysm=$(expr $Ruby5 - $Ruby1)
+
+#Symbian Total Malware After Running Maltrieve
+
+Symbian8=$(ls /opt/maltrieve/archive/Symbian/xlarge | wc -l)
+Symbian7=$(ls /opt/maltrieve/archive/Symbian/large | wc -l)
+Symbian6=$(ls /opt/maltrieve/archive/Symbian/medium | wc -l)
+Symbian5=$(ls /opt/maltrieve/archive/Symbian/small | wc -l)
+
+#Symbian New Malware Calculated
+
+Symbianxl=$(expr $Symbian8 - $Symbian4)
+Symbianlg=$(expr $Symbian7 - $Symbian3)
+Symbianmd=$(expr $Symbian6 - $Symbian2)
+Symbiansm=$(expr $Symbian5 - $Symbian1)
+
+#troff Total Malware After Running Maltrieve
+
+troff8=$(ls /opt/maltrieve/archive/troff/xlarge | wc -l)
+troff7=$(ls /opt/maltrieve/archive/troff/large | wc -l)
+troff6=$(ls /opt/maltrieve/archive/troff/medium | wc -l)
+troff5=$(ls /opt/maltrieve/archive/troff/small | wc -l)
+
+#troff New Malware Calculated
+
+troffxl=$(expr $troff8 - $troff4)
+trofflg=$(expr $troff7 - $troff3)
+troffmd=$(expr $troff6 - $troff2)
+troffsm=$(expr $troff5 - $troff1)
+
 #UTF8 Total Malware After Running Maltrieve
 
 UTF88=$(ls /opt/maltrieve/archive/UTF-8/xlarge | wc -l)
@@ -357,6 +553,20 @@ UTF8xl=$(expr $UTF88 - $UTF84)
 UTF8lg=$(expr $UTF87 - $UTF83)
 UTF8md=$(expr $UTF86 - $UTF82)
 UTF8sm=$(expr $UTF85 - $UTF81)
+
+#xHTML Total Malware After Running Maltrieve
+
+xHTML8=$(ls /opt/maltrieve/archive/xHTML/xlarge | wc -l)
+xHTML7=$(ls /opt/maltrieve/archive/xHTML/large | wc -l)
+xHTML6=$(ls /opt/maltrieve/archive/xHTML/medium | wc -l)
+xHTML5=$(ls /opt/maltrieve/archive/xHTML/small | wc -l)
+
+#xHTML New Malware Calculated
+
+xHTMLxl=$(expr $xHTML8 - $xHTML4)
+xHTMLlg=$(expr $xHTML7 - $xHTML3)
+xHTMLmd=$(expr $xHTML6 - $xHTML2)
+xHTMLsm=$(expr $xHTML5 - $xHTML1)
 
 #XML Total Malware After Running Maltrieve
 
@@ -411,10 +621,20 @@ echo Java Extra Large: $Javaxl Large: $Javalg Medium: $Javamd Small: $Javasm
 echo Java Extra Large: $Javaxl Large: $Javalg Medium: $Javamd Small: $Javasm >> /opt/maltrieve/Malcounted
 echo JPEG Extra Large: $JPEGxl Large: $JPEGlg Medium: $JPEGmd Small: $JPEGsm 
 echo JPEG Extra Large: $JPEGxl Large: $JPEGlg Medium: $JPEGmd Small: $JPEGsm >> /opt/maltrieve/Malcounted
+echo Macintosh Extra Large: $Macintoshxl Large: $Macintoshlg Medium: $Macintoshmd Small: $Macintoshsm 
+echo Macintosh Extra Large: $Macintoshxl Large: $Macintoshlg Medium: $Macintoshmd Small: $Macintoshsm >> /opt/maltrieve/Malcounted
+echo Macromedia Extra Large: $Macromediaxl Large: $Macromedialg Medium: $Macromediamd Small: $Macromediasm
+echo Macromedia Extra Large: $Macromediaxl Large: $Macromedialg Medium: $Macromediamd Small: $Macromediasm >> /opt/maltrieve/Malcounted
+echo Microsoft Extra Large: $Microsoftxl Large: $Microsoftlg Medium: $Microsoftmd Small: $Microsoftsm 
+echo Microsoft Extra Large: $Microsoftxl Large: $Microsoftlg Medium: $Microsoftmd Small: $Microsoftsm >> /opt/maltrieve/Malcounted
 echo MS Extra Large: $MSxl Large: $MSlg Medium: $MSmd Small: $MSsm 
 echo MS Extra Large: $MSxl Large: $MSlg Medium: $MSmd Small: $MSsm  >> /opt/maltrieve/Malcounted
 echo MSDOS Extra Large: $MSDOSxl Large: $MSDOSlg Medium: $MSDOSmd Small: $MSDOSsm 
 echo MSDOS Extra Large: $MSDOSxl Large: $MSDOSlg Medium: $MSDOSmd Small: $MSDOSsm  >> /opt/maltrieve/Malcounted
+echo NonISO Extra Large: $NonISOxl Large: $NonISOlg Medium: $NonISOmd Small: $NonISOsm 
+echo NonISO Extra Large: $NonISOxl Large: $NonISOlg Medium: $NonISOmd Small: $NonISOsm >> /opt/maltrieve/Malcounted
+echo PalmOS Extra Large: $PalmOSxl Large: $PalmOSlg Medium: $PalmOSmd Small: $PalmOSsm 
+echo PalmOS Extra Large: $PalmOSxl Large: $PalmOSlg Medium: $PalmOSmd Small: $PalmOSsm >> /opt/maltrieve/Malcounted
 echo PDF Extra Large: $PDFxl Large: $PDFlg Medium: $PDFmd Small: $PDFsm 
 echo PDF Extra Large: $PDFxl Large: $PDFlg Medium: $PDFmd Small: $PDFsm >> /opt/maltrieve/Malcounted
 echo PE32 Extra Large: $PE32xl Large: $PE32lg Medium: $PE32md Small: $PE32sm 
@@ -423,10 +643,20 @@ echo PE32p Extra Large: $PE32pxl Large: $PE32plg Medium: $PE32pmd Small: $PE32ps
 echo PE32p Extra Large: $PE32pxl Large: $PE32plg Medium: $PE32pmd Small: $PE32psm >> /opt/maltrieve/Malcounted
 echo PNG Extra Large: $PNGxl Large: $PNGlg Medium: $PNGmd Small: $PNGsm 
 echo PNG Extra Large: $PNGxl Large: $PNGlg Medium: $PNGmd Small: $PNGsm >> /opt/maltrieve/Malcounted
+echo POSIX Extra Large: $POSIXxl Large: $POSIXlg Medium: $POSIXmd Small: $POSIXsm 
+echo POSIX Extra Large: $POSIXxl Large: $POSIXlg Medium: $POSIXmd Small: $POSIXsm >> /opt/maltrieve/Malcounted
 echo RAR Extra Large: $RARxl Large: $RARlg Medium: $RARmd Small: $RARsm 
 echo RAR Extra Large: $RARxl Large: $RARlg Medium: $RARmd Small: $RARsm >> /opt/maltrieve/Malcounted
+echo Ruby Extra Large: $Rubyxl Large: $Rubylg Medium: $Rubymd Small: $Rubysm 
+echo Ruby Extra Large: $Rubyxl Large: $Rubylg Medium: $Rubymd Small: $Rubysm >> /opt/maltrieve/Malcounted
+echo Symbian Extra Large: $Symbianxl Large: $Symbianlg Medium: $Symbianmd Small: $Symbiansm 
+echo Symbian Extra Large: $Symbianxl Large: $Symbianlg Medium: $Symbianmd Small: $Symbiansm >> /opt/maltrieve/Malcounted
+echo troff Extra Large: $troffxl Large: $trofflg Medium: $troffmd Small: $troffsm 
+echo troff Extra Large: $troffxl Large: $trofflg Medium: $troffmd Small: $troffsm >> /opt/maltrieve/Malcounted
 echo UTF8 Extra Large: $UTF8xl Large: $UTF8lg Medium: $UTF8md Small: $UTF8sm 
 echo UTF8 Extra Large: $UTF8xl Large: $UTF8lg Medium: $UTF8md Small: $UTF8sm >> /opt/maltrieve/Malcounted
+echo xHTML Extra Large: $xHTMLxl Large: $xHTMLlg Medium: $xHTMLmd Small: $xHTMLsm 
+echo xHTML Extra Large: $xHTMLxl Large: $xHTMLlg Medium: $xHTMLmd Small: $xHTMLsm >> /opt/maltrieve/Malcounted
 echo XML Extra Large: $XMLxl Large: $XMLlg Medium: $XMLmd Small: $XMLsm 
 echo XML Extra Large: $XMLxl Large: $XMLlg Medium: $XMLmd Small: $XMLsm >> /opt/maltrieve/Malcounted
 echo Zip Extra Large: $Zipxl Large: $Ziplg Medium: $Zipmd Small: $Zipsm 
