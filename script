@@ -1,0 +1,440 @@
+#!/bin/bash
+#This Program Runs Maltrieve & Calculates How Many Viruses
+#Are Downloaded & Sorted By Type Using maltrievecategorizer
+#and Then Provides a Count for Each particular Type of File
+
+#Total Virus Count Before Running Maltrieve...
+
+VariaVirus=$(ls /opt/maltrieve/archive | wc -l)
+
+#Total Specific Virus Counts Before Maltrieve (By Type and Size)
+
+#ASCII Pre-Count
+
+ASCII4=$(ls /opt/maltrieve/archive/ASCII/xlarge | wc -l)
+ASCII3=$(ls /opt/maltrieve/archive/ASCII/large | wc -l)
+ASCII2=$(ls /opt/maltrieve/archive/ASCII/medium | wc -l)
+ASCII1=$(ls /opt/maltrieve/archive/ASCII/small | wc -l)
+
+#Composite Pre-Count
+
+Composite4=$(ls /opt/maltrieve/archive/Composite/xlarge | wc -l)
+Composite3=$(ls /opt/maltrieve/archive/Composite/large | wc -l)
+Composite2=$(ls /opt/maltrieve/archive/Composite/medium | wc -l)
+Composite1=$(ls /opt/maltrieve/archive/Composite/small | wc -l)
+
+#data Pre-Count
+
+data4=$(ls /opt/maltrieve/archive/data/xlarge | wc -l)
+data3=$(ls /opt/maltrieve/archive/data/large | wc -l)
+data2=$(ls /opt/maltrieve/archive/data/medium | wc -l)
+data1=$(ls /opt/maltrieve/archive/data/small | wc -l)
+
+#GIF Pre-Count
+
+GIF4=$(ls /opt/maltrieve/archive/GIF/xlarge | wc -l)
+GIF3=$(ls /opt/maltrieve/archive/GIF/large | wc -l)
+GIF2=$(ls /opt/maltrieve/archive/GIF/medium | wc -l)
+GIF1=$(ls /opt/maltrieve/archive/GIF/small | wc -l)
+
+#HTML Pre-Count
+
+HTML4=$(ls /opt/maltrieve/archive/HTML/xlarge | wc -l)
+HTML3=$(ls /opt/maltrieve/archive/HTML/large | wc -l)
+HTML2=$(ls /opt/maltrieve/archive/HTML/medium | wc -l)
+HTML1=$(ls /opt/maltrieve/archive/HTML/small | wc -l)
+
+#Java Pre-Count
+
+Java4=$(ls /opt/maltrieve/archive/Java/xlarge | wc -l)
+Java3=$(ls /opt/maltrieve/archive/Java/large | wc -l)
+Java2=$(ls /opt/maltrieve/archive/Java/medium | wc -l)
+Java1=$(ls /opt/maltrieve/archive/Java/small | wc -l)
+
+#JPEG Pre-Count
+
+JPEG4=$(ls /opt/maltrieve/archive/JPEG/xlarge | wc -l)
+JPEG3=$(ls /opt/maltrieve/archive/JPEG/large | wc -l)
+JPEG2=$(ls /opt/maltrieve/archive/JPEG/medium | wc -l)
+JPEG1=$(ls /opt/maltrieve/archive/JPEG/small | wc -l)
+
+#MS Pre-Count
+
+MS4=$(ls /opt/maltrieve/archive/MS/xlarge | wc -l)
+MS3=$(ls /opt/maltrieve/archive/MS/large | wc -l)
+MS2=$(ls /opt/maltrieve/archive/MS/medium | wc -l)
+MS1=$(ls /opt/maltrieve/archive/MS/small | wc -l)
+
+#MS-DOS Pre-Count
+
+MSDOS4=$(ls /opt/maltrieve/archive/MS-DOS/xlarge | wc -l)
+MSDOS3=$(ls /opt/maltrieve/archive/MS-DOS/large | wc -l)
+MSDOS2=$(ls /opt/maltrieve/archive/MS-DOS/medium | wc -l)
+MSDOS1=$(ls /opt/maltrieve/archive/MS-DOS/small | wc -l)
+
+#PDF Pre-Count
+
+PDF4=$(ls /opt/maltrieve/archive/PDF/xlarge | wc -l)
+PDF3=$(ls /opt/maltrieve/archive/PDF/large | wc -l)
+PDF2=$(ls /opt/maltrieve/archive/PDF/medium | wc -l)
+PDF1=$(ls /opt/maltrieve/archive/PDF/small | wc -l)
+
+#PE32 Pre-Count
+
+PE324=$(ls /opt/maltrieve/archive/PE32/xlarge | wc -l)
+PE323=$(ls /opt/maltrieve/archive/PE32/large | wc -l)
+PE322=$(ls /opt/maltrieve/archive/PE32/medium | wc -l)
+PE321=$(ls /opt/maltrieve/archive/PE32/small | wc -l)
+
+#PE32+ Pre-Count
+
+PE32p4=$(ls /opt/maltrieve/archive/PE32+/xlarge | wc -l)
+PE32p3=$(ls /opt/maltrieve/archive/PE32+/large | wc -l)
+PE32p2=$(ls /opt/maltrieve/archive/PE32+/medium | wc -l)
+PE32p1=$(ls /opt/maltrieve/archive/PE32+/small | wc -l)
+
+#PNG Pre-Count
+
+PNG4=$(ls /opt/maltrieve/archive/PNG/xlarge | wc -l)
+PNG3=$(ls /opt/maltrieve/archive/PNG/large | wc -l)
+PNG2=$(ls /opt/maltrieve/archive/PNG/medium | wc -l)
+PNG1=$(ls /opt/maltrieve/archive/PNG/small | wc -l)
+
+#RAR Pre-Count
+
+RAR4=$(ls /opt/maltrieve/archive/RAR/xlarge | wc -l)
+RAR3=$(ls /opt/maltrieve/archive/RAR/large | wc -l)
+RAR2=$(ls /opt/maltrieve/archive/RAR/medium | wc -l)
+RAR1=$(ls /opt/maltrieve/archive/RAR/small | wc -l)
+
+#UTF8 Pre-Count
+
+UTF84=$(ls /opt/maltrieve/archive/UTF-8/xlarge | wc -l)
+UTF83=$(ls /opt/maltrieve/archive/UTF-8/large | wc -l)
+UTF82=$(ls /opt/maltrieve/archive/UTF-8/medium | wc -l)
+UTF81=$(ls /opt/maltrieve/archive/UTF-8/small | wc -l)
+
+#XML Pre-Count
+
+XML4=$(ls /opt/maltrieve/archive/XML/xlarge | wc -l)
+XML3=$(ls /opt/maltrieve/archive/XML/large | wc -l)
+XML2=$(ls /opt/maltrieve/archive/XML/medium | wc -l)
+XML1=$(ls /opt/maltrieve/archive/XML/small | wc -l)
+
+#Zip Pre-Count
+
+Zip4=$(ls /opt/maltrieve/archive/Zip/xlarge | wc -l)
+Zip3=$(ls /opt/maltrieve/archive/Zip/large | wc -l)
+Zip2=$(ls /opt/maltrieve/archive/Zip/medium | wc -l)
+Zip1=$(ls /opt/maltrieve/archive/Zip/small | wc -l)
+
+#Now that files have been counted, we can run Maltrieve
+
+cd /opt/maltrieve && python /opt/maltrieve/maltrieve.py 
+
+echo Fetching Malware! This May Take Some Time...
+
+#Total Virus Count, Post Maltrieve & Total New File Count
+
+VariaVirus2=$(ls /opt/maltrieve/archive | wc -l)
+VirusMount=$(expr $VariaVirus2 - $VariaVirus)
+
+sleep 1
+/opt/maltrieve/maltrievecategorizer.sh
+echo Categorizing Malware! Please Wait...
+sleep 5
+echo Counting Malware... Almost Finished!
+sleep 5
+
+#Total Specific Virus Counts Before Maltrieve
+
+#ASCII Total Malware After Running Maltrieve
+
+ASCII8=$(ls /opt/maltrieve/archive/ASCII/xlarge | wc -l)
+ASCII7=$(ls /opt/maltrieve/archive/ASCII/large | wc -l)
+ASCII6=$(ls /opt/maltrieve/archive/ASCII/medium | wc -l)
+ASCII5=$(ls /opt/maltrieve/archive/ASCII/small | wc -l)
+
+#ASCII New Malware Calculated
+
+ASCIIxl=$(expr $ASCII8 - $ASCII4)
+ASCIIlg=$(expr $ASCII7 - $ASCII3)
+ASCIImd=$(expr $ASCII6 - $ASCII2)
+ASCIIsm=$(expr $ASCII5 - $ASCII1)
+
+#Composite Total Malware After Running Maltrieve
+
+Composite8=$(ls /opt/maltrieve/archive/Composite/xlarge | wc -l)
+Composite7=$(ls /opt/maltrieve/archive/Composite/large | wc -l)
+Composite6=$(ls /opt/maltrieve/archive/Composite/medium | wc -l)
+Composite5=$(ls /opt/maltrieve/archive/Composite/small | wc -l)
+
+#Composite New Malware Calculated
+
+Compositexl=$(expr $Composite8 - $Composite4)
+Compositelg=$(expr $Composite7 - $Composite3)
+Compositemd=$(expr $Composite6 - $Composite2)
+Compositesm=$(expr $Composite5 - $Composite1)
+
+#data Total Malware After Running Maltrieve
+
+data8=$(ls /opt/maltrieve/archive/data/xlarge | wc -l)
+data7=$(ls /opt/maltrieve/archive/data/large | wc -l)
+data6=$(ls /opt/maltrieve/archive/data/medium | wc -l)
+data5=$(ls /opt/maltrieve/archive/data/small | wc -l)
+
+#data New Malware Calculated
+
+dataxl=$(expr $data8 - $data4)
+datalg=$(expr $data7 - $data3)
+datamd=$(expr $data6 - $data2)
+datasm=$(expr $data5 - $data1)
+
+#GIF Total Malware After Running Maltrieve
+
+GIF8=$(ls /opt/maltrieve/archive/GIF/xlarge | wc -l)
+GIF7=$(ls /opt/maltrieve/archive/GIF/large | wc -l)
+GIF6=$(ls /opt/maltrieve/archive/GIF/medium | wc -l)
+GIF5=$(ls /opt/maltrieve/archive/GIF/small | wc -l)
+
+#GIF New Malware Calculated
+
+GIFxl=$(expr $GIF8 - $GIF4)
+GIFlg=$(expr $GIF7 - $GIF3)
+GIFmd=$(expr $GIF6 - $GIF2)
+GIFsm=$(expr $GIF5 - $GIF1)
+
+#HTML Total Malware After Running Maltrieve
+
+HTML8=$(ls /opt/maltrieve/archive/HTML/xlarge | wc -l)
+HTML7=$(ls /opt/maltrieve/archive/HTML/large | wc -l)
+HTML6=$(ls /opt/maltrieve/archive/HTML/medium | wc -l)
+HTML5=$(ls /opt/maltrieve/archive/HTML/small | wc -l)
+
+#HTML New Malware Calculated
+
+HTMLxl=$(expr $HTML8 - $HTML4)
+HTMLlg=$(expr $HTML7 - $HTML3)
+HTMLmd=$(expr $HTML6 - $HTML2)
+HTMLsm=$(expr $HTML5 - $HTML1)
+
+#Java Total Malware After Running Maltrieve
+
+Java8=$(ls /opt/maltrieve/archive/Java/xlarge | wc -l)
+Java7=$(ls /opt/maltrieve/archive/Java/large | wc -l)
+Java6=$(ls /opt/maltrieve/archive/Java/medium | wc -l)
+Java5=$(ls /opt/maltrieve/archive/Java/small | wc -l)
+
+#Java New Malware Calculated
+
+Javaxl=$(expr $Java8 - $Java4)
+Javalg=$(expr $Java7 - $Java3)
+Javamd=$(expr $Java6 - $Java2)
+Javasm=$(expr $Java5 - $Java1)
+
+#JPEG Total Malware After Running Maltrieve
+
+JPEG8=$(ls /opt/maltrieve/archive/JPEG/xlarge | wc -l)
+JPEG7=$(ls /opt/maltrieve/archive/JPEG/large | wc -l)
+JPEG6=$(ls /opt/maltrieve/archive/JPEG/medium | wc -l)
+JPEG5=$(ls /opt/maltrieve/archive/JPEG/small | wc -l)
+
+#JPEG New Malware Calculated
+
+JPEGxl=$(expr $JPEG8 - $JPEG4)
+JPEGlg=$(expr $JPEG7 - $JPEG3)
+JPEGmd=$(expr $JPEG6 - $JPEG2)
+JPEGsm=$(expr $JPEG5 - $JPEG1)
+
+#MS Total Malware After Running Maltrieve
+
+MS8=$(ls /opt/maltrieve/archive/MS/xlarge | wc -l)
+MS7=$(ls /opt/maltrieve/archive/MS/large | wc -l)
+MS6=$(ls /opt/maltrieve/archive/MS/medium | wc -l)
+MS5=$(ls /opt/maltrieve/archive/MS/small | wc -l)
+
+#MSDOS New Malware Calculated
+
+MSxl=$(expr $MS8 - $MS4)
+MSlg=$(expr $MS7 - $MS3)
+MSmd=$(expr $MS6 - $MS2)
+MSsm=$(expr $MS5 - $MS1)
+
+#MSDOS Total Malware After Running Maltrieve
+
+MSDOS8=$(ls /opt/maltrieve/archive/MS-DOS/xlarge | wc -l)
+MSDOS7=$(ls /opt/maltrieve/archive/MS-DOS/large | wc -l)
+MSDOS6=$(ls /opt/maltrieve/archive/MS-DOS/medium | wc -l)
+MSDOS5=$(ls /opt/maltrieve/archive/MS-DOS/small | wc -l)
+
+#MSDOS New Malware Calculated
+
+MSDOSxl=$(expr $MSDOS8 - $MSDOS4)
+MSDOSlg=$(expr $MSDOS7 - $MSDOS3)
+MSDOSmd=$(expr $MSDOS6 - $MSDOS2)
+MSDOSsm=$(expr $MSDOS5 - $MSDOS1)
+
+#PDF Total Malware After Running Maltrieve
+
+PDF8=$(ls /opt/maltrieve/archive/PDF/xlarge | wc -l)
+PDF7=$(ls /opt/maltrieve/archive/PDF/large | wc -l)
+PDF6=$(ls /opt/maltrieve/archive/PDF/medium | wc -l)
+PDF5=$(ls /opt/maltrieve/archive/PDF/small | wc -l)
+
+#PDF New Malware Calculated
+
+PDFxl=$(expr $PDF8 - $PDF4)
+PDFlg=$(expr $PDF7 - $PDF3)
+PDFmd=$(expr $PDF6 - $PDF2)
+PDFsm=$(expr $PDF5 - $PDF1)
+
+#PE32 Total Malware After Running Maltrieve
+
+PE328=$(ls /opt/maltrieve/archive/PE32/xlarge | wc -l)
+PE327=$(ls /opt/maltrieve/archive/PE32/large | wc -l)
+PE326=$(ls /opt/maltrieve/archive/PE32/medium | wc -l)
+PE325=$(ls /opt/maltrieve/archive/PE32/small | wc -l)
+
+#PE32 New Malware Calculated
+
+PE32xl=$(expr $PE328 - $PE324)
+PE32lg=$(expr $PE327 - $PE323)
+PE32md=$(expr $PE326 - $PE322)
+PE32sm=$(expr $PE325 - $PE321)
+
+#PE32+ Total Malware After Running Maltrieve
+
+PE32p8=$(ls /opt/maltrieve/archive/PE32+/xlarge | wc -l)
+PE32p7=$(ls /opt/maltrieve/archive/PE32+/large | wc -l)
+PE32p6=$(ls /opt/maltrieve/archive/PE32+/medium | wc -l)
+PE32p5=$(ls /opt/maltrieve/archive/PE32+/small | wc -l)
+
+#PE32+ New Malware Calculated
+
+PE32pxl=$(expr $PE32p8 - $PE32p4)
+PE32plg=$(expr $PE32p7 - $PE32p3)
+PE32pmd=$(expr $PE32p6 - $PE32p2)
+PE32psm=$(expr $PE32p5 - $PE32p1)
+
+#PNG Total Malware After Running Maltrieve
+
+PNG8=$(ls /opt/maltrieve/archive/PNG/xlarge | wc -l)
+PNG7=$(ls /opt/maltrieve/archive/PNG/large | wc -l)
+PNG6=$(ls /opt/maltrieve/archive/PNG/medium | wc -l)
+PNG5=$(ls /opt/maltrieve/archive/PNG/small | wc -l)
+
+#PNG New Malware Calculated
+
+PNGxl=$(expr $PNG8 - $PNG4)
+PNGlg=$(expr $PNG7 - $PNG3)
+PNGmd=$(expr $PNG6 - $PNG2)
+PNGsm=$(expr $PNG5 - $PNG1)
+
+#RAR Total Malware After Running Maltrieve
+
+RAR8=$(ls /opt/maltrieve/archive/RAR/xlarge | wc -l)
+RAR7=$(ls /opt/maltrieve/archive/RAR/large | wc -l)
+RAR6=$(ls /opt/maltrieve/archive/RAR/medium | wc -l)
+RAR5=$(ls /opt/maltrieve/archive/RAR/small | wc -l)
+
+#RAR New Malware Calculated
+
+RARxl=$(expr $RAR8 - $RAR4)
+RARlg=$(expr $RAR7 - $RAR3)
+RARmd=$(expr $RAR6 - $RAR2)
+RARsm=$(expr $RAR5 - $RAR1)
+
+#UTF8 Total Malware After Running Maltrieve
+
+UTF88=$(ls /opt/maltrieve/archive/UTF-8/xlarge | wc -l)
+UTF87=$(ls /opt/maltrieve/archive/UTF-8/large | wc -l)
+UTF86=$(ls /opt/maltrieve/archive/UTF-8/medium | wc -l)
+UTF85=$(ls /opt/maltrieve/archive/UTF-8/small | wc -l)
+
+#UTF8 New Malware Calculated
+
+UTF8xl=$(expr $UTF88 - $UTF84)
+UTF8lg=$(expr $UTF87 - $UTF83)
+UTF8md=$(expr $UTF86 - $UTF82)
+UTF8sm=$(expr $UTF85 - $UTF81)
+
+#XML Total Malware After Running Maltrieve
+
+XML8=$(ls /opt/maltrieve/archive/XML/xlarge | wc -l)
+XML7=$(ls /opt/maltrieve/archive/XML/large | wc -l)
+XML6=$(ls /opt/maltrieve/archive/XML/medium | wc -l)
+XML5=$(ls /opt/maltrieve/archive/XML/small | wc -l)
+
+#XML New Malware Calculated
+
+XMLxl=$(expr $XML8 - $XML4)
+XMLlg=$(expr $XML7 - $XML3)
+XMLmd=$(expr $XML6 - $XML2)
+XMLsm=$(expr $XML5 - $XML1)
+
+#Zip Total Malware After Running Maltrieve
+
+Zip8=$(ls /opt/maltrieve/archive/Zip/xlarge | wc -l)
+Zip7=$(ls /opt/maltrieve/archive/Zip/large | wc -l)
+Zip6=$(ls /opt/maltrieve/archive/Zip/medium | wc -l)
+Zip5=$(ls /opt/maltrieve/archive/Zip/small | wc -l)
+
+#Zip New Malware Calculated
+
+Zipxl=$(expr $Zip8 - $Zip4)
+Ziplg=$(expr $Zip7 - $Zip3)
+Zipmd=$(expr $Zip6 - $Zip2)
+Zipsm=$(expr $Zip5 - $Zip1)
+
+echo
+echo $VirusMount Malware Downloaded 
+echo
+echo $VirusMount Malware Downloaded $(date) >> /opt/maltrieve/Malcounted
+echo >> /opt/maltrieve/Malcounted
+echo Note: Some Malware Downloaded May Have Already Existed In Archives
+echo Note: Some Malware Downloaded May Have Already Existed In Archives >> /opt/maltrieve/Malcounted
+echo Note: If A New Category Of Malware Was Downloaded, It Has Not Been Listed Below.
+echo Note: If A New Category Of Malware Was Downloaded, It Has Not Been Listed Below. >> /opt/maltrieve/Malcounted
+echo
+echo >> /opt/maltrieve/Malcounted
+echo ASCII Extra Large: $ASCIIxl Large: $ASCIIlg Medium: $ASCIImd Small: $ASCIIsm 
+echo ASCII Extra Large: $ASCIIxl Large: $ASCIIlg Medium: $ASCIImd Small: $ASCIIsm >> /opt/maltrieve/Malcounted
+echo Composite Extra Large: $Compositexl Large: $Compositelg Medium: $Compositemd Small: $Compositesm 
+echo Composite Extra Large: $Compositexl Large: $Compositelg Medium: $Compositemd Small: $Compositesm >> /opt/maltrieve/Malcounted
+echo data Extra Large: $dataxl Large: $datalg Medium: $datamd Small: $datasm 
+echo data Extra Large: $dataxl Large: $datalg Medium: $datamd Small: $datasm >> /opt/maltrieve/Malcounted
+echo GIF Extra Large: $GIFxl Large: $GIFlg Medium: $GIFmd Small: $GIFsm 
+echo GIF Extra Large: $GIFxl Large: $GIFlg Medium: $GIFmd Small: $GIFsm >> /opt/maltrieve/Malcounted
+echo HTML Extra Large: $HTMLxl Large: $HTMLlg Medium: $HTMLmd Small: $HTMLsm
+echo HTML Extra Large: $HTMLxl Large: $HTMLlg Medium: $HTMLmd Small: $HTMLsm >> /opt/maltrieve/Malcounted
+echo Java Extra Large: $Javaxl Large: $Javalg Medium: $Javamd Small: $Javasm 
+echo Java Extra Large: $Javaxl Large: $Javalg Medium: $Javamd Small: $Javasm >> /opt/maltrieve/Malcounted
+echo JPEG Extra Large: $JPEGxl Large: $JPEGlg Medium: $JPEGmd Small: $JPEGsm 
+echo JPEG Extra Large: $JPEGxl Large: $JPEGlg Medium: $JPEGmd Small: $JPEGsm >> /opt/maltrieve/Malcounted
+echo MS Extra Large: $MSxl Large: $MSlg Medium: $MSmd Small: $MSsm 
+echo MS Extra Large: $MSxl Large: $MSlg Medium: $MSmd Small: $MSsm  >> /opt/maltrieve/Malcounted
+echo MSDOS Extra Large: $MSDOSxl Large: $MSDOSlg Medium: $MSDOSmd Small: $MSDOSsm 
+echo MSDOS Extra Large: $MSDOSxl Large: $MSDOSlg Medium: $MSDOSmd Small: $MSDOSsm  >> /opt/maltrieve/Malcounted
+echo PDF Extra Large: $PDFxl Large: $PDFlg Medium: $PDFmd Small: $PDFsm 
+echo PDF Extra Large: $PDFxl Large: $PDFlg Medium: $PDFmd Small: $PDFsm >> /opt/maltrieve/Malcounted
+echo PE32 Extra Large: $PE32xl Large: $PE32lg Medium: $PE32md Small: $PE32sm 
+echo PE32 Extra Large: $PE32xl Large: $PE32lg Medium: $PE32md Small: $PE32sm >> /opt/maltrieve/Malcounted
+echo PE32p Extra Large: $PE32pxl Large: $PE32plg Medium: $PE32pmd Small: $PE32psm 
+echo PE32p Extra Large: $PE32pxl Large: $PE32plg Medium: $PE32pmd Small: $PE32psm >> /opt/maltrieve/Malcounted
+echo PNG Extra Large: $PNGxl Large: $PNGlg Medium: $PNGmd Small: $PNGsm 
+echo PNG Extra Large: $PNGxl Large: $PNGlg Medium: $PNGmd Small: $PNGsm >> /opt/maltrieve/Malcounted
+echo RAR Extra Large: $RARxl Large: $RARlg Medium: $RARmd Small: $RARsm 
+echo RAR Extra Large: $RARxl Large: $RARlg Medium: $RARmd Small: $RARsm >> /opt/maltrieve/Malcounted
+echo UTF8 Extra Large: $UTF8xl Large: $UTF8lg Medium: $UTF8md Small: $UTF8sm 
+echo UTF8 Extra Large: $UTF8xl Large: $UTF8lg Medium: $UTF8md Small: $UTF8sm >> /opt/maltrieve/Malcounted
+echo XML Extra Large: $XMLxl Large: $XMLlg Medium: $XMLmd Small: $XMLsm 
+echo XML Extra Large: $XMLxl Large: $XMLlg Medium: $XMLmd Small: $XMLsm >> /opt/maltrieve/Malcounted
+echo Zip Extra Large: $Zipxl Large: $Ziplg Medium: $Zipmd Small: $Zipsm 
+echo Zip Extra Large: $Zipxl Large: $Ziplg Medium: $Zipmd Small: $Zipsm >> /opt/maltrieve/Malcounted
+echo  >> /opt/maltrieve/Malcounted
+echo
+echo Thank You For Running Maltrieve! 
+echo ................................
+echo Thank You For Running Maltrieve! >> /opt/maltrieve/Malcounted
+echo ................................ >> /opt/maltrieve/Malcounted
+echo
