@@ -1,4 +1,11 @@
 #!/bin/bash
+#*++*H*++*A*++*C*++*K*++*
+#*++**+T+**++*H*++**+E+**
+#+ P*+ L*+ A*+ N*+ E*+ T*
+#
+#HACK
+#THE
+#PL
 #This Program Runs Maltrieve & Calculates How Many Viruses
 #Are Downloaded & Sorted By Type Using maltrievecategorizer
 #and Then Provides a Count for Each particular Type of File
